@@ -1,0 +1,23 @@
+<p>
+  <b>Street:</b>
+  <%= @branch.street %>
+</p>
+
+<p>
+  <b>Town:</b>
+  <%= @branch.town %>
+</p>
+
+<p>
+  <b>County:</b>
+  <%= @branch.county %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%= @branch.phone %>
+</p>
+
+
+<%= link_to 'Edit', edit_branch_path(@branch) %> |
+<%= link_to 'Back', branches_path %>

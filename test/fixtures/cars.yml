@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  make: MyString
+  enginesize: 1.5
+  year: 1
+  colour: MyString
+  order_id: 1
+
+two:
+  make: MyString
+  enginesize: 1.5
+  year: 1
+  colour: MyString
+  order_id: 1

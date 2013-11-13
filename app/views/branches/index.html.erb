@@ -1,0 +1,29 @@
+<h1>Listing branches</h1>
+
+<table>
+  <tr>
+    <th>Street</th>
+    <th>Town</th>
+    <th>County</th>
+    <th>Phone</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @branches.each do |branch| %>
+  <tr>
+    <td><%= branch.street %></td>
+    <td><%= branch.town %></td>
+    <td><%= branch.county %></td>
+    <td><%= branch.phone %></td>
+    <td><%= link_to 'Show', branch %></td>
+    <td><%= link_to 'Edit', edit_branch_path(branch) %></td>
+    <td><%= link_to 'Destroy', branch, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Branch', new_branch_path %>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Viking Cars</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div id="banner">
+	<%= image_tag("viking.jpg", :size => "200x100") %>
+	<%= @page_title || "Viking Cars" %>
+</div>
+<div id="nav" center>
+<ul>
+	<% if !signed_in? %>
+	<li><%= link_to "Sign In", signin_path %></li>		
+	<% else %>
+	<li>Signed in as <%= @current_customer.name %></li>
+	<li><%= link_to "Sign Out", signout_path %></li>
+	
+	<%end %>
+	
+	<li><%= link_to "Home", root_path%></li>
+	<li><%= link_to "About us", about_path%></li>
+	<li><%= link_to "Cars for Sale", cars_path%></li>
+    <li><%= link_to "Place an Order", new_order_path%></li>
+	<li><%= link_to "Branches", branches_path%></li>
+	<li><%= link_to "Car Insurance", 'http://www.aviva.ie/' %></li>
+	<li><%= mail_to "stewi745@gmail.com", "Contact us" %></li>
+</ul>
+</div>
+<p id ="notice"><%= notice %></p>
+<%= yield %>
+
+</body>
+</html>

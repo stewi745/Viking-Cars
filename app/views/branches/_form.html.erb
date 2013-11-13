@@ -1,0 +1,33 @@
+<%= form_for(@branch) do |f| %>
+  <% if @branch.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@branch.errors.count, "error") %> prohibited this branch from being saved:</h2>
+
+      <ul>
+      <% @branch.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :street %><br />
+    <%= f.text_field :street %>
+  </div>
+  <div class="field">
+    <%= f.label :town %><br />
+    <%= f.text_field :town %>
+  </div>
+  <div class="field">
+    <%= f.label :county %><br />
+    <%= f.text_field :county %>
+  </div>
+  <div class="field">
+    <%= f.label :phone %><br />
+    <%= f.number_field :phone %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

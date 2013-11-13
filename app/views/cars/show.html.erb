@@ -1,0 +1,38 @@
+<p>
+  <b>Branch:</b>
+  <%= @car.branch.street %>
+</p>
+
+<p>
+  <b>Make:</b>
+  <%= @car.make %>
+</p>
+
+<p>
+  <b>Engine Size:</b>
+  <%= @car.enginesize %>
+</p>
+
+<p>
+  <b>Year:</b>
+  <%= @car.year %>
+</p>
+
+<p>
+  <b>Colour:</b>
+  <%= @car.colour %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%= @car.price %>
+</p>
+
+<p>
+  <b>Photo:</b>
+  <%= image_tag(@car.photo, :size => "300x150") %>
+</p>
+
+
+<%= link_to 'Edit', edit_car_path(@car) %> |
+<%= link_to 'Back', cars_path %>
